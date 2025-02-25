@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="static/css/main.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <h1>Welcome to Our Website</h1>
+    <p>Here is an introduction narrated by a child voice:</p>
+    <audio controls>
+        <source src="static/heyada.mp3" type="audio/mp3"> <!-- Path to your audio file -->
+        Your browser does not support the audio element.
+    </audio>
+    <button id="playButton">Play Audio</button>
+<audio id="audioElement" controls>
+    <source src="static/heyada.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var audioElement = document.getElementById('audioElement');
+        audioElement.play();
+    });
+</script>
+
+
+    <!-- Optional: JavaScript to Auto-Play the Audio on Page Load -->
+    <script src="static/main.js"></script> <!-- Link to your JS file -->
+    <script>
+        window.addEventListener('load', function() {
+            var audioElement = document.querySelector('audio');
+            audioElement.play();
+        });
+    </script>
+</body>
+</html>
